@@ -30,6 +30,11 @@ keymap.set("n", "<leader>bd", ":bdelete<CR>") -- delete current buffer
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+keymap.set("n", "[d", vim.diagnostic.goto_prev)
+keymap.set("n", "]d", vim.diagnostic.goto_next)
+-- keymap.set("n", "]d", vim.diagnostic.open_float)
+-- keymap.set("n", "]d", vim.diagnostic.setloclist)
+
 -- copying to system clipboard
 keymap.set("n", "<leader>y", '"+y')
 keymap.set("v", "<leader>y", '"+y')
