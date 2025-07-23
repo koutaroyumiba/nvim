@@ -50,3 +50,5 @@ opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 opt.undofile = true
 
 opt.iskeyword:append("-")
+
+vim.cmd(":Copilot disable")
