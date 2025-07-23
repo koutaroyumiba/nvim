@@ -178,7 +178,7 @@ return {
 					["<C-n>"] = cmp.mapping.select_next_item(), -- next suggestion
 					["<C-space>"] = cmp.mapping.complete(), -- show completion suggestions
 					["<C-e>"] = cmp.mapping.abort(),
-					["<C-y>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+					["<Tab>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 				}),
 				-- sources for autocompletion
 				sources = cmp.config.sources({
