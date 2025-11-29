@@ -1,4 +1,4 @@
-return {
+local M = {
 	{
 		"nvim-telescope/telescope.nvim",
 		config = function()
@@ -40,3 +40,5 @@ return {
 	},
 	{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 }
+
+return {}
