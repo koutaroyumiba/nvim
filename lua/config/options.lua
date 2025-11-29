@@ -13,6 +13,7 @@ opt.tabstop = 4
 opt.shiftwidth = 4
 opt.expandtab = true
 opt.autoindent = true
+opt.smartindent = true
 
 -- line wrapping
 opt.wrap = true
@@ -30,6 +31,8 @@ opt.cursorline = true
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
+opt.winborder = "rounded"
+opt.colorcolumn = "120"
 
 --backspace
 opt.backspace = "indent,eol,start"
@@ -42,8 +45,8 @@ opt.splitright = true
 opt.splitbelow = true
 
 -- extra
-opt.scrolloff = 8
-opt.colorcolumn = "120"
+opt.scrolloff = 10
+opt.sidescrolloff = 8
 
 -- after getting undotree plugin
 opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
@@ -51,4 +54,4 @@ opt.undofile = true
 
 opt.iskeyword:append("-")
 
-vim.cmd(":Copilot disable")
+-- vim.cmd(":Copilot disable") -- disables copilot

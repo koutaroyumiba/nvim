@@ -5,7 +5,31 @@ local keymap = vim.keymap -- :D
 -- general keymaps
 
 -- cancelled
-keymap.set("i", "<C-c>", "<Esc>") -- cancel insert mode
+keymap.set("i", "<C-c>", "<Esc>", { desc = "Cancel insert mode (cursed)" })
+
+-- center screen when jumping
+keymap.set("n", "n", "nzzzv", { desc = "Next search result (centered)" })
+keymap.set("n", "N", "Nzzzv", { desc = "Previous search result (centered)" })
+keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Half page down (centered)" })
+keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Half page up (centered)" })
+
+-- buffer navigation
+keymap.set("n", "<leader>bn", "<Cmd>bnext<CR>", { desc = "Next buffer" })
+keymap.set("n", "<leader>bp", "<Cmd>bprevious<CR>", { desc = "Previous buffer" })
+keymap.set("n", "<leader>bd", ":bdelete<CR>", { desc = "Delete current buffer" })
+
+-- splitting and resizing
+keymap.set("n", "<leader>sv", "<Cmd>vsplit<CR>", { desc = "Split window vertically" })
+keymap.set("n", "<leader>sh", "<Cmd>split<CR>", { desc = "Split window horizontally" })
+keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal width" })
+keymap.set("n", "<C-Up>", "<Cmd>resize +2", { desc = "Increase window height" })
+keymap.set("n", "<C-Down>", "<Cmd>resize -2", { desc = "Decrease window height" })
+keymap.set("n", "<C-Left>", "<Cmd>vertical resize +2", { desc = "Increase window width" })
+keymap.set("n", "<C-Up>", "<Cmd>vertical resize -2", { desc = "Decrease window width" })
+
+-- better indenting in visual mode
+keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
+keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
 
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- clear search highlight
 keymap.set("n", "x", '"_x') -- delete char without copying to register
@@ -13,19 +37,10 @@ keymap.set("x", "<leader>p", '"_dP') -- replace and paste
 keymap.set("n", "<leader>+", "<C-a>") -- increment number
 keymap.set("n", "<leader>-", "<C-x>") -- decrement number
 
-keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
-keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
-keymap.set("n", "<leader>se", "<C-w>=") -- make split equal width
-keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
-
 keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
 keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>tn", ":tabn<CR>") -- go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>") -- go to prev tab
-
-keymap.set("n", "<leader>be", ":bprevious<CR>") -- go to prev buffer
-keymap.set("n", "<leader>q", ":bnext<CR>") -- go to next buffer
-keymap.set("n", "<leader>bd", ":bdelete<CR>") -- delete current buffer
 
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -59,15 +74,10 @@ keymap.set("n", "<leader>example", function()
 	vim.fn.chansend(term_job_id, { "ls -al\r\n" })
 end)
 
-keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
-keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
 keymap.set("n", "<leader>th", "<C-w>v <C-w>h <cmd>term<CR> i")
 keymap.set("n", "<leader>tj", "<C-w>s <cmd>term<CR> i")
 keymap.set("n", "<leader>tk", "<C-w>s <C-w>k <cmd>term<CR> i")
 keymap.set("n", "<leader>tl", "<C-w>v <cmd>term<CR> i")
-
-keymap.set("n", "<C-d>", "<C-d>zz")
-keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- plugin keymaps --
 
@@ -88,9 +98,9 @@ keymap.set("n", "<leader>oq", "<cmd>ObsidianQuickSwitch<cr>", { desc = "Obsidian
 -- undotree
 keymap.set("n", "<leader>u", ":UndotreeToggle<CR>")
 
--- lazygit
-keymap.set("n", "<leader>gg", "<Cmd>LazyGit<CR>")
-
 -- fugitive
 keymap.set("n", "gh", ":diffget //2<CR>") -- get changes from left
 keymap.set("n", "gl", ":diffget //3<CR>") -- get changes from right
+
+-- lsp stuff
+keymap.set("n", "<leader>lf", vim.lsp.buf.format)
