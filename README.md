@@ -49,6 +49,8 @@ Following plugins are installed (sorted alphabetically):
   - I love teej too
 - [todo-comments](https://github.com/folke/todo-comments.nvim)
   - I love folke too
+- [treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
+  - for that sticky context in files
 - [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
   - for treesitter in neovim
 - [undotree](https://github.com/mbbill/undotree)
