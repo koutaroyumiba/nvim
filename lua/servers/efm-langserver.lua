@@ -64,7 +64,6 @@ return function(capabilities)
 				json = { eslint_d, fixjson },
 				jsonc = { eslint_d, fixjson },
 				lua = { luacheck, stylua },
-				markdown = { prettier_d },
 				python = { flake8, black },
 				sh = { shellcheck, shfmt },
 				svelte = { eslint_d, prettier_d },
