@@ -9,7 +9,7 @@ return {
 				-- conform will run multiple formatters sequentially
 				python = { "isort", "black" },
 				-- use a sublist to run only the first available formatter
-				javascript = { { "prettierd", "prettier" } },
+				javascript = { "prettierd", "prettier" },
 				java = { "google-java-format" },
 			},
 			format_on_save = function(bufnr)
