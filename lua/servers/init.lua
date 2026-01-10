@@ -12,9 +12,6 @@ require("servers.pyright")(capabilities)
 require("servers.tailwindcss")(capabilities)
 require("servers.ts_ls")(capabilities)
 
--- linters and formatters
-require("servers.efm-langserver")(capabilities)
-
 vim.lsp.enable({
 	"bashls",
 	"clangd",
@@ -26,5 +23,4 @@ vim.lsp.enable({
 	"pyright",
 	"tailwindcss",
 	"ts_ls",
-	"efm",
 })

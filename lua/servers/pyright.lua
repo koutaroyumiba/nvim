@@ -2,13 +2,11 @@ return function(capabilities)
 	vim.lsp.config("pyright", {
 		capabilities = capabilities,
 		settings = {
-			pyright = {
-				disableOrganizeImports = false,
+			python = {
 				analysis = {
-					useLibraryCodeForTypes = true,
+					typeCheckingMode = "strict",
 					autoSearchPaths = true,
 					diagnosticMode = "workspace",
-					autoImportCompletions = true,
 				},
 			},
 		},
