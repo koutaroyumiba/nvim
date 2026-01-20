@@ -18,6 +18,8 @@ Plugins are managed using [lazy.nvim](https://github.com/folke/lazy.nvim). All p
 
 Following plugins are installed (sorted alphabetically):
 
+- [conform](https://github.com/stevearc/conform.nvim)
+  - I need my formatters
 - [fugitive](https://github.com/tpope/vim-fugitive)
   - the goated vim-git integration
 - [fzf-lua](https://github.com/ibhagwan/fzf-lua)
@@ -36,13 +38,13 @@ Following plugins are installed (sorted alphabetically):
   - autocompletion stuff!!
 - [nvim-colorizer](https://github.com/catgoose/nvim-colorizer.lua)
   - to colour my css
+- [nvim-lint](https://github.com/mfussenegger/nvim-lint)
+  - like the formatter, need my linters
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
   - lsp configurations!!!
   - dependent on [mason](https://github.com/williamboman/mason.nvim)
 - [obsidian](https://github.com/epwalsh/obsidian.nvim)
   - i love obsidian for notetaking
-- [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim)
-  - for rendering markdown within neovim
 - [rose-pine](https://github.com/rose-pine/neovim) (set to rose-pine-moon)
   - my chosen colorscheme
 - [telescope](https://github.com/nvim-telescope/telescope.nvim)
@@ -64,3 +66,4 @@ Following plugins are installed (sorted alphabetically):
 - [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
 - [fzf](https://github.com/junegunn/fzf)
 - [luarocks](https://github.com/luarocks/luarocks)
+- [tree-sitter-cli](https://github.com/tree-sitter/tree-sitter/blob/master/crates/cli/README.md)
