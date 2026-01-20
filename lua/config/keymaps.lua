@@ -22,10 +22,10 @@ keymap.set("n", "<leader>bd", ":bdelete<CR>", { desc = "Delete current buffer" }
 keymap.set("n", "<leader>sv", "<Cmd>vsplit<CR>", { desc = "Split window vertically" })
 keymap.set("n", "<leader>sh", "<Cmd>split<CR>", { desc = "Split window horizontally" })
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal width" })
-keymap.set("n", "<C-Up>", "<Cmd>resize +2", { desc = "Increase window height" })
-keymap.set("n", "<C-Down>", "<Cmd>resize -2", { desc = "Decrease window height" })
-keymap.set("n", "<C-Left>", "<Cmd>vertical resize +2", { desc = "Increase window width" })
-keymap.set("n", "<C-Up>", "<Cmd>vertical resize -2", { desc = "Decrease window width" })
+keymap.set("n", "<C-Up>", "<Cmd>resize +2<CR>", { desc = "Increase window height" })
+keymap.set("n", "<C-Down>", "<Cmd>resize -2<CR>", { desc = "Decrease window height" })
+keymap.set("n", "<C-Left>", "<Cmd>vertical resize +2<CR>", { desc = "Increase window width" })
+keymap.set("n", "<C-Right>", "<Cmd>vertical resize -2<CR>", { desc = "Decrease window width" })
 
 -- better indenting in visual mode
 keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
