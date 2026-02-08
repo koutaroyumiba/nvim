@@ -13,5 +13,11 @@ return function(capabilities)
 				indentSize = 2,
 			},
 		},
+		root_dir = vim.fs.root(0, {
+			"tsconfig.json",
+			"package.json",
+			"jsconfig.json",
+			".git",
+		}),
 	})
 end
