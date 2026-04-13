@@ -8,9 +8,8 @@ return function(capabilities)
 				},
 				workspace = {
 					library = {
-						-- make language server aware of runtime files
-						vim.fn.expand("$VIMRUNTIME/lua"),
-						vim.fn.expand("$XDG_CONFIG_HOME") .. "/nvim/lua",
+						vim.env.VIMRUNTIME .. "/lua",
+						vim.fn.stdpath("config") .. "/lua",
 					},
 				},
 			},

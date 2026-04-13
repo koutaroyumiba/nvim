@@ -19,6 +19,17 @@ return {
 					c = { "clang-format" },
 					cpp = { "clang-format" },
 				},
+
+				formatters = {
+					prettierd = {
+						cwd = require("conform.util").root_file({
+							".prettierrc",
+							".prettierrc.json",
+							"prettier.config.js",
+							"package.json",
+						}),
+					},
+				},
 			})
 		end,
 	},

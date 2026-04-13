@@ -5,6 +5,19 @@ return {
 		config = function()
 			local lint = require("lint")
 
+			lint.linters.luacheck = require("lint.util").wrap(lint.linters.luacheck, function(diagnostic)
+				return diagnostic
+			end)
+			lint.linters.luacheck.args = {
+				"--globals",
+				"vim",
+				"--formatter",
+				"plain",
+				"--codes",
+				"--ranges",
+				"-",
+			}
+
 			lint.linters_by_ft = {
 				lua = { "luacheck" },
 				python = { "ruff" },
