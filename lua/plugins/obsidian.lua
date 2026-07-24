@@ -10,7 +10,7 @@ return {
 		workspaces = {
 			{
 				name = "personal",
-				path = "~/my_obsidian/kot-pkm",
+				path = "~/workspace/knowledge",
 			},
 		},
 		daily_notes = {
