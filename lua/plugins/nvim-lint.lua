@@ -29,8 +29,6 @@ return {
 				sh = { "shellcheck" },
 				go = { "revive" },
 				dockerfile = { "hadolint" },
-				c = { "clangtidy" },
-				cpp = { "clangtidy" },
 			}
 
 			vim.api.nvim_create_autocmd({ "BufWritePost", "BufEnter", "InsertLeave" }, {
