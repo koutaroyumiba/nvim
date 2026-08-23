@@ -57,16 +57,16 @@ keymap.set("v", "<leader>d", '"_d')
 -- terminal configs
 local term_job_id = 0
 keymap.set("n", "<leader>st", function()
-	vim.cmd.vnew()
-	vim.cmd.term()
-	vim.cmd.wincmd("J")
-	vim.api.nvim_win_set_height(0, 10)
-	vim.api.nvim_feedkeys("i", "n", true)
-	term_job_id = vim.bo.channel
+  vim.cmd.vnew()
+  vim.cmd.term()
+  vim.cmd.wincmd("J")
+  vim.api.nvim_win_set_height(0, 10)
+  vim.api.nvim_feedkeys("i", "n", true)
+  term_job_id = vim.bo.channel
 end)
 
 keymap.set("n", "<leader>example", function()
-	vim.fn.chansend(term_job_id, { "ls -al\r\n" })
+  vim.fn.chansend(term_job_id, { "ls -al\r\n" })
 end)
 
 keymap.set("n", "<leader>th", "<C-w>v <C-w>h <cmd>term<CR> i")
