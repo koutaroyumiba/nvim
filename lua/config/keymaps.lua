@@ -31,24 +31,19 @@ keymap.set("n", "<C-Right>", "<Cmd>vertical resize -2<CR>", { desc = "Decrease w
 keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
 keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
 
-keymap.set("n", "<leader>nh", ":nohl<CR>") -- clear search highlight
-keymap.set("n", "x", '"_x') -- delete char without copying to register
-keymap.set("x", "<leader>p", '"_dP') -- replace and paste
-keymap.set("n", "<leader>+", "<C-a>") -- increment number
-keymap.set("n", "<leader>-", "<C-x>") -- decrement number
+keymap.set("n", "<leader>nh", ":nohl<CR>")     -- clear search highlight
+keymap.set("n", "x", '"_x')                    -- delete char without copying to register
+keymap.set("x", "<leader>p", '"_dP')           -- replace and paste
+keymap.set("n", "<leader>+", "<C-a>")          -- increment number
+keymap.set("n", "<leader>-", "<C-x>")          -- decrement number
 
-keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
+keymap.set("n", "<leader>to", ":tabnew<CR>")   -- open new tab
 keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
-keymap.set("n", "<leader>tn", ":tabn<CR>") -- go to next tab
-keymap.set("n", "<leader>tp", ":tabp<CR>") -- go to prev tab
+keymap.set("n", "<leader>tn", ":tabn<CR>")     -- go to next tab
+keymap.set("n", "<leader>tp", ":tabp<CR>")     -- go to prev tab
 
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-
-keymap.set("n", "[d", vim.diagnostic.goto_prev)
-keymap.set("n", "]d", vim.diagnostic.goto_next)
--- keymap.set("n", "]d", vim.diagnostic.open_float)
--- keymap.set("n", "]d", vim.diagnostic.setloclist)
 
 -- copying to system clipboard
 keymap.set("n", "<leader>y", '"+y')
@@ -89,9 +84,9 @@ keymap.set("n", "<leader>wm", ":MaximizerToggle<CR>") -- maximise split window o
 keymap.set("n", "<leader>e", ":Ex<CR>") -- toggles file explorer
 
 -- obsidian
-keymap.set("n", "<leader>oo", "<cmd>ObsidianOpen<cr>") -- open obsidian
-keymap.set("n", "<leader>ol", "<cmd>ObsidianLink<cr>") -- open link in obsidian
-keymap.set("n", "<leader>on", "<cmd>ObsidianNew<cr>", { desc = "Create New Note" }) -- create new note in obsidian
+keymap.set("n", "<leader>oo", "<cmd>ObsidianOpen<cr>")                                 -- open obsidian
+keymap.set("n", "<leader>ol", "<cmd>ObsidianLink<cr>")                                 -- open link in obsidian
+keymap.set("n", "<leader>on", "<cmd>ObsidianNew<cr>", { desc = "Create New Note" })    -- create new note in obsidian
 keymap.set("n", "<leader>os", "<cmd>ObsidianSearch<cr>", { desc = "Search Obsidian" }) -- Search obsidian
 keymap.set("n", "<leader>oq", "<cmd>ObsidianQuickSwitch<cr>", { desc = "Obsidian Quick Switch" })
 

@@ -20,8 +20,8 @@ M.on_attach = function(event)
 	keymap("n", "<leader>vrn", vim.lsp.buf.rename, opts)                                       -- rename symbol
 	keymap("n", "<leader>vd", vim.diagnostic.open_float, opts)                                 -- cursor diagnostics
 	keymap("n", "<leader>vD", "<cmd>lua vim.diagnostic.open_float({ scope = 'line' })<CR>", opts) -- line diagnostics
-	keymap("n", "<leader>pd", function() vim.diagnostic.jump({ count = -1 }) end, opts)        -- previous diagnostic
-	keymap("n", "<leader>nd", function() vim.diagnostic.jump({ count = 1 }) end, opts)         -- next diagnostic
+	keymap("n", "[d", function() vim.diagnostic.jump({ count = -1 }) end, opts)                -- previous diagnostic
+	keymap("n", "]d", function() vim.diagnostic.jump({ count = 1 }) end, opts)                 -- next diagnostic
 	keymap("n", "K", vim.lsp.buf.hover, opts)                                                  -- displays hover information about symbol under cursor
 
 	-- fzf-lua keymaps
