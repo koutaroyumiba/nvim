@@ -1,7 +1,7 @@
 local opt = vim.opt -- for conciseness
 
 opt.guicursor = "n-v-c-sm:block"
-opt.conceallevel = 0 -- for obsidian nice rendering
+opt.conceallevel = 0   -- for obsidian nice rendering
 vim.g.netrw_banner = 0 -- clears netrw header
 
 -- line numbers
@@ -9,9 +9,9 @@ opt.relativenumber = true
 opt.number = true
 
 -- tabs and indentation
-opt.tabstop = 4
-opt.shiftwidth = 4
--- opt.expandtab = true -- expands are not real in the face of prettier
+opt.tabstop = 2
+opt.shiftwidth = 2
+opt.expandtab = true
 opt.autoindent = true
 opt.smartindent = true
 
@@ -54,4 +54,5 @@ opt.undofile = true
 
 opt.iskeyword:append("-")
 
--- vim.cmd(":Copilot disable") -- disables copilot
+-- beautiful autoread for claude code
+opt.autoread = true
