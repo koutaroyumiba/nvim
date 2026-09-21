@@ -1,5 +1,9 @@
 return {
   "christoomey/vim-tmux-navigator",
+  -- only load inside a tmux session; outside tmux, plain <C-w> maps handle panes
+  cond = function()
+    return vim.env.TMUX ~= nil
+  end,
   cmd = {
     "TmuxNavigateLeft",
     "TmuxNavigateDown",
