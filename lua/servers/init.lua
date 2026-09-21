@@ -1,6 +1,7 @@
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 -- LSP
+require("servers.astro")(capabilities)
 require("servers.bashls")(capabilities)
 require("servers.clangd")(capabilities)
 require("servers.dockerls")(capabilities)
@@ -13,14 +14,15 @@ require("servers.tailwindcss")(capabilities)
 require("servers.ts_ls")(capabilities)
 
 vim.lsp.enable({
-	"bashls",
-	"clangd",
-	"dockerls",
-	"emmet_ls",
-	"gopls",
-	"jsonls",
-	"lua_ls",
-	"pyright",
-	"tailwindcss",
-	"ts_ls",
+  "astro",
+  "bashls",
+  "clangd",
+  "dockerls",
+  "emmet_ls",
+  "gopls",
+  "jsonls",
+  "lua_ls",
+  "pyright",
+  "tailwindcss",
+  "ts_ls",
 })
