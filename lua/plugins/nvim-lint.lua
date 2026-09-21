@@ -5,6 +5,18 @@ return {
 		config = function()
 			local lint = require("lint")
 
+			lint.linters.revive = require("lint.util").wrap(lint.linters.revive, function(diagnostic)
+				if diagnostic.end_lnum and diagnostic.end_lnum < 0 then
+					diagnostic.end_lnum = nil
+				end
+
+				if diagnostic.end_col and diagnostic.end_col < 0 then
+					diagnostic.end_col = nil
+				end
+
+				return diagnostic
+			end)
+
 			lint.linters.luacheck = require("lint.util").wrap(lint.linters.luacheck, function(diagnostic)
 				return diagnostic
 			end)

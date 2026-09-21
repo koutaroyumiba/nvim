@@ -3,7 +3,6 @@ return {
   cmd = "CodeDiff",
   opts = {
     explorer = {
-      hidden = true,
       initial_focus = "modified",
       view_mode = "tree", -- tree/list
       status_right_margin = 2,
