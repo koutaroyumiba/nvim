@@ -53,6 +53,3 @@ opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 opt.undofile = true
 
 opt.iskeyword:append("-")
-
--- beautiful autoread for claude code
-opt.autoread = true
