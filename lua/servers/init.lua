@@ -12,6 +12,7 @@ require("servers.lua_ls")(capabilities)
 require("servers.pyright")(capabilities)
 require("servers.tailwindcss")(capabilities)
 require("servers.ts_ls")(capabilities)
+require("servers.zls")(capabilities)
 
 vim.lsp.enable({
   "astro",
@@ -25,4 +26,5 @@ vim.lsp.enable({
   "pyright",
   "tailwindcss",
   "ts_ls",
+  "zls",
 })
