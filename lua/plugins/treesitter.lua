@@ -23,7 +23,7 @@ return {
       "gitignore",
       "cpp",
       "c",
-      "zls",
+      "zig",
     })
 
     vim.api.nvim_create_autocmd("FileType", {
