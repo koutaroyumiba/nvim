@@ -10,6 +10,7 @@ require("servers.gopls")(capabilities)
 require("servers.jsonls")(capabilities)
 require("servers.lua_ls")(capabilities)
 require("servers.pyright")(capabilities)
+require("servers.rust_analyzer")(capabilities)
 require("servers.tailwindcss")(capabilities)
 require("servers.ts_ls")(capabilities)
 require("servers.zls")(capabilities)
@@ -24,6 +25,7 @@ vim.lsp.enable({
   "jsonls",
   "lua_ls",
   "pyright",
+  "rust_analyzer",
   "tailwindcss",
   "ts_ls",
   "zls",

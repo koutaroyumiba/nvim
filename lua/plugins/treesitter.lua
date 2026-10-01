@@ -24,6 +24,7 @@ return {
       "cpp",
       "c",
       "zig",
+      "rust",
     })
 
     vim.api.nvim_create_autocmd("FileType", {
